@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C96031DF77D6EAD40094F1B1 /* libPods-EasyRTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDBC687853B3E10A2FCD5F6 /* libPods-EasyRTC.a */; };
+		E09CD59D21BE2E1300510343 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E09CD59C21BE2E1300510343 /* AppDelegate.m */; };
+		E09CD5A021BE2E1300510343 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E09CD59F21BE2E1300510343 /* ViewController.m */; };
+		E09CD5A321BE2E1300510343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09CD5A121BE2E1300510343 /* Main.storyboard */; };
+		E09CD5A521BE2E1500510343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E09CD5A421BE2E1500510343 /* Assets.xcassets */; };
+		E09CD5A821BE2E1500510343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09CD5A621BE2E1500510343 /* LaunchScreen.storyboard */; };
+		E09CD5AB21BE2E1500510343 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E09CD5AA21BE2E1500510343 /* main.m */; };
+		E09CD5B521BE2E1500510343 /* EasyRTCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E09CD5B421BE2E1500510343 /* EasyRTCTests.m */; };
+		E09CD5C021BE2E1500510343 /* EasyRTCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E09CD5BF21BE2E1500510343 /* EasyRTCUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E09CD5B121BE2E1500510343 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E09CD59021BE2E1300510343 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E09CD59721BE2E1300510343;
+			remoteInfo = EasyRTC;
+		};
+		E09CD5BC21BE2E1500510343 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E09CD59021BE2E1300510343 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E09CD59721BE2E1300510343;
+			remoteInfo = EasyRTC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7EDBC687853B3E10A2FCD5F6 /* libPods-EasyRTC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyRTC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B427E5773BCD799A23EFFE1C /* Pods-EasyRTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyRTC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyRTC/Pods-EasyRTC.debug.xcconfig"; sourceTree = "<group>"; };
+		B4540B5A3E411798B10A2CE1 /* Pods-EasyRTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyRTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyRTC/Pods-EasyRTC.release.xcconfig"; sourceTree = "<group>"; };
+		E09CD59821BE2E1300510343 /* EasyRTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyRTC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E09CD59B21BE2E1300510343 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E09CD59C21BE2E1300510343 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E09CD59E21BE2E1300510343 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E09CD59F21BE2E1300510343 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E09CD5A221BE2E1300510343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E09CD5A421BE2E1500510343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E09CD5A721BE2E1500510343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E09CD5A921BE2E1500510343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E09CD5AA21BE2E1500510343 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E09CD5B021BE2E1500510343 /* EasyRTCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyRTCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E09CD5B421BE2E1500510343 /* EasyRTCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyRTCTests.m; sourceTree = "<group>"; };
+		E09CD5B621BE2E1500510343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E09CD5BB21BE2E1500510343 /* EasyRTCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyRTCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E09CD5BF21BE2E1500510343 /* EasyRTCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyRTCUITests.m; sourceTree = "<group>"; };
+		E09CD5C121BE2E1500510343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E09CD59521BE2E1300510343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96031DF77D6EAD40094F1B1 /* libPods-EasyRTC.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E09CD5AD21BE2E1500510343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E09CD5B821BE2E1500510343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C0A90505C3DE51B8C9A9F73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B427E5773BCD799A23EFFE1C /* Pods-EasyRTC.debug.xcconfig */,
+				B4540B5A3E411798B10A2CE1 /* Pods-EasyRTC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF00B6E37281A3C06721809B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EDBC687853B3E10A2FCD5F6 /* libPods-EasyRTC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E09CD58F21BE2E1300510343 = {
+			isa = PBXGroup;
+			children = (
+				E09CD59A21BE2E1300510343 /* EasyRTC */,
+				E09CD5B321BE2E1500510343 /* EasyRTCTests */,
+				E09CD5BE21BE2E1500510343 /* EasyRTCUITests */,
+				E09CD59921BE2E1300510343 /* Products */,
+				0C0A90505C3DE51B8C9A9F73 /* Pods */,
+				CF00B6E37281A3C06721809B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E09CD59921BE2E1300510343 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E09CD59821BE2E1300510343 /* EasyRTC.app */,
+				E09CD5B021BE2E1500510343 /* EasyRTCTests.xctest */,
+				E09CD5BB21BE2E1500510343 /* EasyRTCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E09CD59A21BE2E1300510343 /* EasyRTC */ = {
+			isa = PBXGroup;
+			children = (
+				E09CD59B21BE2E1300510343 /* AppDelegate.h */,
+				E09CD59C21BE2E1300510343 /* AppDelegate.m */,
+				E09CD59E21BE2E1300510343 /* ViewController.h */,
+				E09CD59F21BE2E1300510343 /* ViewController.m */,
+				E09CD5A121BE2E1300510343 /* Main.storyboard */,
+				E09CD5A421BE2E1500510343 /* Assets.xcassets */,
+				E09CD5A621BE2E1500510343 /* LaunchScreen.storyboard */,
+				E09CD5A921BE2E1500510343 /* Info.plist */,
+				E09CD5AA21BE2E1500510343 /* main.m */,
+			);
+			path = EasyRTC;
+			sourceTree = "<group>";
+		};
+		E09CD5B321BE2E1500510343 /* EasyRTCTests */ = {
+			isa = PBXGroup;
+			children = (
+				E09CD5B421BE2E1500510343 /* EasyRTCTests.m */,
+				E09CD5B621BE2E1500510343 /* Info.plist */,
+			);
+			path = EasyRTCTests;
+			sourceTree = "<group>";
+		};
+		E09CD5BE21BE2E1500510343 /* EasyRTCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E09CD5BF21BE2E1500510343 /* EasyRTCUITests.m */,
+				E09CD5C121BE2E1500510343 /* Info.plist */,
+			);
+			path = EasyRTCUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E09CD59721BE2E1300510343 /* EasyRTC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E09CD5C421BE2E1500510343 /* Build configuration list for PBXNativeTarget "EasyRTC" */;
+			buildPhases = (
+				22103ABFC22987843E6FE971 /* [CP] Check Pods Manifest.lock */,
+				E09CD59421BE2E1300510343 /* Sources */,
+				E09CD59521BE2E1300510343 /* Frameworks */,
+				E09CD59621BE2E1300510343 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyRTC;
+			productName = EasyRTC;
+			productReference = E09CD59821BE2E1300510343 /* EasyRTC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E09CD5AF21BE2E1500510343 /* EasyRTCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E09CD5C721BE2E1500510343 /* Build configuration list for PBXNativeTarget "EasyRTCTests" */;
+			buildPhases = (
+				E09CD5AC21BE2E1500510343 /* Sources */,
+				E09CD5AD21BE2E1500510343 /* Frameworks */,
+				E09CD5AE21BE2E1500510343 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E09CD5B221BE2E1500510343 /* PBXTargetDependency */,
+			);
+			name = EasyRTCTests;
+			productName = EasyRTCTests;
+			productReference = E09CD5B021BE2E1500510343 /* EasyRTCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E09CD5BA21BE2E1500510343 /* EasyRTCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E09CD5CA21BE2E1500510343 /* Build configuration list for PBXNativeTarget "EasyRTCUITests" */;
+			buildPhases = (
+				E09CD5B721BE2E1500510343 /* Sources */,
+				E09CD5B821BE2E1500510343 /* Frameworks */,
+				E09CD5B921BE2E1500510343 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E09CD5BD21BE2E1500510343 /* PBXTargetDependency */,
+			);
+			name = EasyRTCUITests;
+			productName = EasyRTCUITests;
+			productReference = E09CD5BB21BE2E1500510343 /* EasyRTCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E09CD59021BE2E1300510343 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = cx;
+				TargetAttributes = {
+					E09CD59721BE2E1300510343 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					E09CD5AF21BE2E1500510343 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = E09CD59721BE2E1300510343;
+					};
+					E09CD5BA21BE2E1500510343 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = E09CD59721BE2E1300510343;
+					};
+				};
+			};
+			buildConfigurationList = E09CD59321BE2E1300510343 /* Build configuration list for PBXProject "EasyRTC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E09CD58F21BE2E1300510343;
+			productRefGroup = E09CD59921BE2E1300510343 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E09CD59721BE2E1300510343 /* EasyRTC */,
+				E09CD5AF21BE2E1500510343 /* EasyRTCTests */,
+				E09CD5BA21BE2E1500510343 /* EasyRTCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E09CD59621BE2E1300510343 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E09CD5A821BE2E1500510343 /* LaunchScreen.storyboard in Resources */,
+				E09CD5A521BE2E1500510343 /* Assets.xcassets in Resources */,
+				E09CD5A321BE2E1300510343 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E09CD5AE21BE2E1500510343 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E09CD5B921BE2E1500510343 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22103ABFC22987843E6FE971 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyRTC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E09CD59421BE2E1300510343 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E09CD5A021BE2E1300510343 /* ViewController.m in Sources */,
+				E09CD5AB21BE2E1500510343 /* main.m in Sources */,
+				E09CD59D21BE2E1300510343 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E09CD5AC21BE2E1500510343 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E09CD5B521BE2E1500510343 /* EasyRTCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E09CD5B721BE2E1500510343 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E09CD5C021BE2E1500510343 /* EasyRTCUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E09CD5B221BE2E1500510343 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E09CD59721BE2E1300510343 /* EasyRTC */;
+			targetProxy = E09CD5B121BE2E1500510343 /* PBXContainerItemProxy */;
+		};
+		E09CD5BD21BE2E1500510343 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E09CD59721BE2E1300510343 /* EasyRTC */;
+			targetProxy = E09CD5BC21BE2E1500510343 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E09CD5A121BE2E1300510343 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E09CD5A221BE2E1300510343 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E09CD5A621BE2E1500510343 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E09CD5A721BE2E1500510343 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E09CD5C221BE2E1500510343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E09CD5C321BE2E1500510343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E09CD5C521BE2E1500510343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B427E5773BCD799A23EFFE1C /* Pods-EasyRTC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UQ6VR5KAVV;
+				INFOPLIST_FILE = EasyRTC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.EasyRTC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E09CD5C621BE2E1500510343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4540B5A3E411798B10A2CE1 /* Pods-EasyRTC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UQ6VR5KAVV;
+				INFOPLIST_FILE = EasyRTC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.EasyRTC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E09CD5C821BE2E1500510343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UQ6VR5KAVV;
+				INFOPLIST_FILE = EasyRTCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.EasyRTCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyRTC.app/EasyRTC";
+			};
+			name = Debug;
+		};
+		E09CD5C921BE2E1500510343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UQ6VR5KAVV;
+				INFOPLIST_FILE = EasyRTCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.EasyRTCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyRTC.app/EasyRTC";
+			};
+			name = Release;
+		};
+		E09CD5CB21BE2E1500510343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UQ6VR5KAVV;
+				INFOPLIST_FILE = EasyRTCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.EasyRTCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EasyRTC;
+			};
+			name = Debug;
+		};
+		E09CD5CC21BE2E1500510343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UQ6VR5KAVV;
+				INFOPLIST_FILE = EasyRTCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.EasyRTCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EasyRTC;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E09CD59321BE2E1300510343 /* Build configuration list for PBXProject "EasyRTC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E09CD5C221BE2E1500510343 /* Debug */,
+				E09CD5C321BE2E1500510343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E09CD5C421BE2E1500510343 /* Build configuration list for PBXNativeTarget "EasyRTC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E09CD5C521BE2E1500510343 /* Debug */,
+				E09CD5C621BE2E1500510343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E09CD5C721BE2E1500510343 /* Build configuration list for PBXNativeTarget "EasyRTCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E09CD5C821BE2E1500510343 /* Debug */,
+				E09CD5C921BE2E1500510343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E09CD5CA21BE2E1500510343 /* Build configuration list for PBXNativeTarget "EasyRTCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E09CD5CB21BE2E1500510343 /* Debug */,
+				E09CD5CC21BE2E1500510343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E09CD59021BE2E1300510343 /* Project object */;
+}
