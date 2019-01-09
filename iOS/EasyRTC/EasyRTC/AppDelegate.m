@@ -7,19 +7,26 @@
 //
 
 #import "AppDelegate.h"
+#import "SocketWraper.h"
+#import "RTCPeerConnectionFactory.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong)dispatch_source_t timer;
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self initWebRTCWraper];
+    
+    NSURL *url = [[NSURL alloc] initWithString:@"http://129.28.101.171:1234"];
+    [[SocketWraper shareSocketWraper] setURL:url];
+
+    [self initSocketHeartBeat];
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -45,7 +52,30 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [self deinitWebRTCWraper];
 }
 
+- (void)initSocketWraper {
+    NSURL *url = [[NSURL alloc] initWithString:@"http://172.20.64.86:1234"];
+    [[SocketWraper shareSocketWraper] setURL:url];
+}
+
+- (void)initWebRTCWraper {
+    [RTCPeerConnectionFactory initializeSSL];
+}
+
+- (void)deinitWebRTCWraper {
+    [RTCPeerConnectionFactory deinitializeSSL];
+}
+
+- (void)initSocketHeartBeat {
+    self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
+    dispatch_source_set_timer(self.timer, dispatch_time(DISPATCH_TIME_NOW, 0), 2.0 * NSEC_PER_SEC, 0.0 * NSEC_PER_SEC);
+    __weak typeof(self) WeakSelf = self;
+    dispatch_source_set_event_handler(WeakSelf.timer, ^{
+        [[SocketWraper shareSocketWraper] emitHeartBeat];
+    });
+    dispatch_resume(self.timer);
+}
 
 @end

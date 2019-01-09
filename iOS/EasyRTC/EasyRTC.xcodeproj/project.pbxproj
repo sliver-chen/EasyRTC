@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C96031DF77D6EAD40094F1B1 /* libPods-EasyRTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDBC687853B3E10A2FCD5F6 /* libPods-EasyRTC.a */; };
+		E02BB53C21BFDE7000242C62 /* WebRTCWraper.m in Sources */ = {isa = PBXBuildFile; fileRef = E02BB53B21BFDE7000242C62 /* WebRTCWraper.m */; };
+		E0533FA921C6309F008DD331 /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0533FA821C6309F008DD331 /* CallViewController.m */; };
+		E058C0C321BEC8480002322A /* libPods-EasyRTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDBC687853B3E10A2FCD5F6 /* libPods-EasyRTC.a */; };
+		E058C0C621BF4FBA0002322A /* EasyRTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0C521BF4FBA0002322A /* EasyRTC.swift */; };
+		E058C0C821BF54ED0002322A /* SocketWraper.m in Sources */ = {isa = PBXBuildFile; fileRef = E058C0C721BF54ED0002322A /* SocketWraper.m */; };
 		E09CD59D21BE2E1300510343 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E09CD59C21BE2E1300510343 /* AppDelegate.m */; };
 		E09CD5A021BE2E1300510343 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E09CD59F21BE2E1300510343 /* ViewController.m */; };
 		E09CD5A321BE2E1300510343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09CD5A121BE2E1300510343 /* Main.storyboard */; };
@@ -16,6 +20,9 @@
 		E09CD5AB21BE2E1500510343 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E09CD5AA21BE2E1500510343 /* main.m */; };
 		E09CD5B521BE2E1500510343 /* EasyRTCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E09CD5B421BE2E1500510343 /* EasyRTCTests.m */; };
 		E09CD5C021BE2E1500510343 /* EasyRTCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E09CD5BF21BE2E1500510343 /* EasyRTCUITests.m */; };
+		E0DBC5D621C1731600691EAE /* JsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DBC5D521C1731600691EAE /* JsonObject.m */; };
+		E0DBC5DC21C22EE300691EAE /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = E0DBC5DB21C22EE300691EAE /* call.png */; };
+		E0DBC5DE21C22F0700691EAE /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = E0DBC5DD21C22F0700691EAE /* cancel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +46,15 @@
 		7EDBC687853B3E10A2FCD5F6 /* libPods-EasyRTC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyRTC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B427E5773BCD799A23EFFE1C /* Pods-EasyRTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyRTC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyRTC/Pods-EasyRTC.debug.xcconfig"; sourceTree = "<group>"; };
 		B4540B5A3E411798B10A2CE1 /* Pods-EasyRTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyRTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyRTC/Pods-EasyRTC.release.xcconfig"; sourceTree = "<group>"; };
+		E02BB53A21BFDE6300242C62 /* WebRTCWraper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebRTCWraper.h; sourceTree = "<group>"; };
+		E02BB53B21BFDE7000242C62 /* WebRTCWraper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebRTCWraper.m; sourceTree = "<group>"; };
+		E03CA5E821CA3F9F00E1B9C8 /* EasyLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyLog.h; sourceTree = "<group>"; };
+		E0533FA821C6309F008DD331 /* CallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallViewController.m; sourceTree = "<group>"; };
+		E0533FAA21C630A8008DD331 /* CallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallViewController.h; sourceTree = "<group>"; };
+		E058C0C421BF4FB90002322A /* EasyRTC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyRTC-Bridging-Header.h"; sourceTree = "<group>"; };
+		E058C0C521BF4FBA0002322A /* EasyRTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyRTC.swift; sourceTree = "<group>"; };
+		E058C0C721BF54ED0002322A /* SocketWraper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketWraper.m; sourceTree = "<group>"; };
+		E058C0CB21BF55080002322A /* SocketWraper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketWraper.h; sourceTree = "<group>"; };
 		E09CD59821BE2E1300510343 /* EasyRTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyRTC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E09CD59B21BE2E1300510343 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E09CD59C21BE2E1300510343 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -55,6 +71,12 @@
 		E09CD5BB21BE2E1500510343 /* EasyRTCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyRTCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E09CD5BF21BE2E1500510343 /* EasyRTCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyRTCUITests.m; sourceTree = "<group>"; };
 		E09CD5C121BE2E1500510343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E09CD5CD21BEC64600510343 /* libSocket.IO-Client-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libSocket.IO-Client-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E09CD5CF21BEC64A00510343 /* libStarscream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libStarscream.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0DBC5D421C1730D00691EAE /* JsonObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonObject.h; sourceTree = "<group>"; };
+		E0DBC5D521C1731600691EAE /* JsonObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsonObject.m; sourceTree = "<group>"; };
+		E0DBC5DB21C22EE300691EAE /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = call.png; sourceTree = "<group>"; };
+		E0DBC5DD21C22F0700691EAE /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C96031DF77D6EAD40094F1B1 /* libPods-EasyRTC.a in Frameworks */,
+				E058C0C321BEC8480002322A /* libPods-EasyRTC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,9 +117,37 @@
 		CF00B6E37281A3C06721809B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E09CD5CF21BEC64A00510343 /* libStarscream.a */,
+				E09CD5CD21BEC64600510343 /* libSocket.IO-Client-Swift.a */,
 				7EDBC687853B3E10A2FCD5F6 /* libPods-EasyRTC.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E02BB53421BFC18C00242C62 /* WebRTC */ = {
+			isa = PBXGroup;
+			children = (
+				E02BB53B21BFDE7000242C62 /* WebRTCWraper.m */,
+				E02BB53A21BFDE6300242C62 /* WebRTCWraper.h */,
+			);
+			path = WebRTC;
+			sourceTree = "<group>";
+		};
+		E03CA5E521CA3F8600E1B9C8 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				E03CA5E821CA3F9F00E1B9C8 /* EasyLog.h */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		E058C0C921BF54F30002322A /* Signaling */ = {
+			isa = PBXGroup;
+			children = (
+				E058C0C721BF54ED0002322A /* SocketWraper.m */,
+				E058C0CB21BF55080002322A /* SocketWraper.h */,
+			);
+			path = Signaling;
 			sourceTree = "<group>";
 		};
 		E09CD58F21BE2E1300510343 = {
@@ -125,15 +175,24 @@
 		E09CD59A21BE2E1300510343 /* EasyRTC */ = {
 			isa = PBXGroup;
 			children = (
+				E0DBC5D321C172EE00691EAE /* Json */,
+				E0DBC5DA21C22EDB00691EAE /* res */,
+				E03CA5E521CA3F8600E1B9C8 /* util */,
+				E058C0C921BF54F30002322A /* Signaling */,
+				E02BB53421BFC18C00242C62 /* WebRTC */,
 				E09CD59B21BE2E1300510343 /* AppDelegate.h */,
 				E09CD59C21BE2E1300510343 /* AppDelegate.m */,
-				E09CD59E21BE2E1300510343 /* ViewController.h */,
+				E0533FA821C6309F008DD331 /* CallViewController.m */,
+				E0533FAA21C630A8008DD331 /* CallViewController.h */,
 				E09CD59F21BE2E1300510343 /* ViewController.m */,
+				E09CD59E21BE2E1300510343 /* ViewController.h */,
 				E09CD5A121BE2E1300510343 /* Main.storyboard */,
 				E09CD5A421BE2E1500510343 /* Assets.xcassets */,
 				E09CD5A621BE2E1500510343 /* LaunchScreen.storyboard */,
 				E09CD5A921BE2E1500510343 /* Info.plist */,
 				E09CD5AA21BE2E1500510343 /* main.m */,
+				E058C0C521BF4FBA0002322A /* EasyRTC.swift */,
+				E058C0C421BF4FB90002322A /* EasyRTC-Bridging-Header.h */,
 			);
 			path = EasyRTC;
 			sourceTree = "<group>";
@@ -154,6 +213,24 @@
 				E09CD5C121BE2E1500510343 /* Info.plist */,
 			);
 			path = EasyRTCUITests;
+			sourceTree = "<group>";
+		};
+		E0DBC5D321C172EE00691EAE /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				E0DBC5D421C1730D00691EAE /* JsonObject.h */,
+				E0DBC5D521C1731600691EAE /* JsonObject.m */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		E0DBC5DA21C22EDB00691EAE /* res */ = {
+			isa = PBXGroup;
+			children = (
+				E0DBC5DB21C22EE300691EAE /* call.png */,
+				E0DBC5DD21C22F0700691EAE /* cancel.png */,
+			);
+			path = res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +301,7 @@
 				TargetAttributes = {
 					E09CD59721BE2E1300510343 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					E09CD5AF21BE2E1500510343 = {
 						CreatedOnToolsVersion = 10.0;
@@ -260,6 +338,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0DBC5DE21C22F0700691EAE /* cancel.png in Resources */,
+				E0DBC5DC21C22EE300691EAE /* call.png in Resources */,
 				E09CD5A821BE2E1500510343 /* LaunchScreen.storyboard in Resources */,
 				E09CD5A521BE2E1500510343 /* Assets.xcassets in Resources */,
 				E09CD5A321BE2E1300510343 /* Main.storyboard in Resources */,
@@ -308,9 +388,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0DBC5D621C1731600691EAE /* JsonObject.m in Sources */,
 				E09CD5A021BE2E1300510343 /* ViewController.m in Sources */,
+				E0533FA921C6309F008DD331 /* CallViewController.m in Sources */,
 				E09CD5AB21BE2E1500510343 /* main.m in Sources */,
 				E09CD59D21BE2E1300510343 /* AppDelegate.m in Sources */,
+				E02BB53C21BFDE7000242C62 /* WebRTCWraper.m in Sources */,
+				E058C0C621BF4FBA0002322A /* EasyRTC.swift in Sources */,
+				E058C0C821BF54ED0002322A /* SocketWraper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,13 +565,22 @@
 			baseConfigurationReference = B427E5773BCD799A23EFFE1C /* Pods-EasyRTC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UQ6VR5KAVV;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EasyRTC/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.EasyRTC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyRTC/EasyRTC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -495,24 +589,37 @@
 			baseConfigurationReference = B4540B5A3E411798B10A2CE1 /* Pods-EasyRTC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UQ6VR5KAVV;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EasyRTC/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.EasyRTC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyRTC/EasyRTC-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
 		E09CD5C821BE2E1500510343 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UQ6VR5KAVV;
 				INFOPLIST_FILE = EasyRTCTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.EasyRTCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -523,11 +630,16 @@
 		E09CD5C921BE2E1500510343 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UQ6VR5KAVV;
 				INFOPLIST_FILE = EasyRTCTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.EasyRTCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,10 +650,15 @@
 		E09CD5CB21BE2E1500510343 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UQ6VR5KAVV;
 				INFOPLIST_FILE = EasyRTCUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.EasyRTCUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -552,10 +669,15 @@
 		E09CD5CC21BE2E1500510343 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UQ6VR5KAVV;
 				INFOPLIST_FILE = EasyRTCUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.meitu.EasyRTCUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -5,5 +5,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target "EasyRTC" do
 
     pod 'libjingle_peerconnection'
+    
+    pod 'Socket.IO-Client-Swift', '~> 13.4.0'
 
 end

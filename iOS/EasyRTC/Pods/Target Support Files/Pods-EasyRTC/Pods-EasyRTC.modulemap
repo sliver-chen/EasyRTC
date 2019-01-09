@@ -1,0 +1,6 @@
+module Pods_EasyRTC {
+  umbrella header "Pods-EasyRTC-umbrella.h"
+
+  export *
+  module * { export * }
+}

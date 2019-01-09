@@ -1,0 +1,10 @@
+{
+    "name": "EasyRTC Server",
+    "version": "0.0.1",
+    "author": "sliver-chen <15505920258@163.com>",
+    "description": "EasyRTC Signaling Server",
+    "dependencies": {
+        "colors": "^1.3.3",
+        "socket.io": "^2.2.0"
+    }
+}

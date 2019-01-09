@@ -1,16 +1,24 @@
 PODS:
   - libjingle_peerconnection (11177.2.0)
+  - Socket.IO-Client-Swift (13.4.0):
+    - Starscream (~> 3.0.2)
+  - Starscream (3.0.6)
 
 DEPENDENCIES:
   - libjingle_peerconnection
+  - Socket.IO-Client-Swift (~> 13.4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - libjingle_peerconnection
+    - Socket.IO-Client-Swift
+    - Starscream
 
 SPEC CHECKSUMS:
   libjingle_peerconnection: 3458f646ddd61f08a9f3a0c43fb01fff5c165eb8
+  Socket.IO-Client-Swift: 2b2720f14c92ff1237ced09bc2f2da2022624fee
+  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: 5cf7f1c5b2c89c5c6f7d06f4c79405b8c606d729
+PODFILE CHECKSUM: e4fda4116e4a0a8315434c75b58168f074caf675
 
 COCOAPODS: 1.5.3
