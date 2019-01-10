@@ -70,6 +70,8 @@ public class CameraActivity extends AppCompatActivity implements SocketWraper.So
 
         if (type.equals("exit")) {
             if (mConnectionMap.containsKey(source)) {
+                CameraConnection cameraConnection = mConnectionMap.get(source);
+                cameraConnection.disConnect();
                 mConnectionMap.remove(source);
             }
         }

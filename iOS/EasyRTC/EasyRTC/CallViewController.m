@@ -35,7 +35,7 @@
 
     EasyLog(TAG, "CallViewController did load");
     [[SocketWraper shareSocketWraper] addListener:self];
-    self.rtcWraper = [[WebRTCWraper alloc] initWithDelegate:self];
+    self.rtcWraper = [[WebRTCWraper alloc] initWithDelegate:self ifNeedAddStream:self.ifNeedAddStream];
     
     self.RemoteView.transform = CGAffineTransformMakeScale(-1.0, 1.0);
     [self.RemoteView setDelegate:self];
@@ -50,6 +50,9 @@
     }
     
     [self.view bringSubviewToFront:self.LocalView];
+    if (!self.ifNeedAddStream) {
+        self.LocalView.hidden = YES;
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated

@@ -31,6 +31,8 @@
 
 @property (strong, nonatomic) NSString *chooseAgentID;
 
+@property (strong, nonatomic) NSString *chooseAgentType;
+
 @end
 
 @implementation ViewController
@@ -78,6 +80,11 @@
 {
     CallViewController *next = (CallViewController *)segue.destinationViewController;
     next.actionType = [self.actionType mutableCopy];
+    next.ifNeedAddStream = true;
+
+    if ([self.chooseAgentType isEqualToString:@"Android_Camera"]) {
+        next.ifNeedAddStream = false;
+    }
 }
 
 #pragma mark socket delegate
@@ -146,6 +153,7 @@
     if (index) {
         NSDictionary *dict = self.userAgentList[index.row];
         self.chooseAgentID = dict[@"id"];
+        self.chooseAgentType = dict[@"type"];
         return true;
     }
     

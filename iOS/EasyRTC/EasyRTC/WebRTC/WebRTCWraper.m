@@ -37,14 +37,17 @@ static NSString *const kQXHTURNServerUrl = @"turn:39.105.125.160:3478";
 
 @property (nonatomic, strong) RTCMediaStream *localMedia;
 
+@property bool ifNeedAddStream;
+
 @end
 
 @implementation WebRTCWraper
 
-- (instancetype)initWithDelegate:(id<WebRTCWraperDelegate>) delegate
+- (instancetype)initWithDelegate:(id<WebRTCWraperDelegate>) delegate ifNeedAddStream:(bool)ifNeedAddStream
 {
     self = [super init];
     if (self) {
+        self.ifNeedAddStream = ifNeedAddStream;
         self.wraperDelegate = delegate;
         self.peerFactory = [[RTCPeerConnectionFactory alloc] init];
         self.iceServers = [[NSMutableArray alloc] init];
@@ -53,7 +56,9 @@ static NSString *const kQXHTURNServerUrl = @"turn:39.105.125.160:3478";
         [self.iceServers addObject:[self createIceServer:kQXHTURNServerUrl username:@"helloword" password:@"helloword"]];
         [self createLocalMedia];
         self.peer = [self.peerFactory peerConnectionWithICEServers:self.iceServers constraints:[self defaultPeerConnectionConstraints] delegate:self];
-        [self.peer addStream:self.localMedia];
+        if (ifNeedAddStream) {
+            [self.peer addStream:self.localMedia];
+        }
         [self.peer getStatsWithDelegate:self mediaStreamTrack:nil statsOutputLevel:RTCStatsOutputLevelDebug];
     }
     return self;
@@ -188,7 +193,9 @@ static NSString *const kQXHTURNServerUrl = @"turn:39.105.125.160:3478";
 - (void)createLocalMedia
 {
     self.localMedia = [self createLocalMediaStream];
-    [self.wraperDelegate onLocalStream:self.localMedia];
+    if (self.ifNeedAddStream) {
+        [self.wraperDelegate onLocalStream:self.localMedia];
+    }
 }
 
 - (RTCMediaStream *)createLocalMediaStream {

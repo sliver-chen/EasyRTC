@@ -30,7 +30,7 @@
 
 @property (nonatomic, weak)id<WebRTCWraperDelegate> wraperDelegate;
 
-- (instancetype)initWithDelegate:(id<WebRTCWraperDelegate>) delegate;
+- (instancetype)initWithDelegate:(id<WebRTCWraperDelegate>) delegate ifNeedAddStream:(bool)ifNeedAddStream;
 
 - (void)createOffer;
 

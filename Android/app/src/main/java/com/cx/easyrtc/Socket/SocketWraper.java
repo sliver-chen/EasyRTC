@@ -304,8 +304,9 @@ public class SocketWraper {
                         JSONObject object = (JSONObject) data.get(String.valueOf(i));
                         String id = object.getString("id");
                         String name = object.getString("name");
+                        String remoteType = object.getString("type");
 
-                        list.add(new Agent(id, name));
+                        list.add(new Agent(id, name, remoteType));
                     }
                     synchronized (SocketWraper.shareContext()) {
                         for (SocketDelegate delegate : SocketWraper.shareContext().mListeners) {

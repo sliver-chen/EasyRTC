@@ -20,6 +20,10 @@ public class CameraConnection implements WebRTCWraper.RtcListener{
         mRTCWraper = new WebRTCWraper(this);
     }
 
+    public void disConnect() {
+        mRTCWraper.exitSession();
+    }
+
     public void setRemoteSdp(String type, String sdp) {
         mRTCWraper.setRemoteSdp(type, sdp);
     }

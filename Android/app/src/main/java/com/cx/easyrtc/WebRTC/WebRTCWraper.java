@@ -39,6 +39,8 @@ public class WebRTCWraper implements SdpObserver, PeerConnection.Observer{
 
     private MediaConstraints mMediaConstraints = new MediaConstraints();
 
+    private boolean mIfNeedAddStream;
+
     public interface RtcListener {
 
         void onLocalStream(MediaStream mediaStream);
@@ -52,8 +54,9 @@ public class WebRTCWraper implements SdpObserver, PeerConnection.Observer{
         void onIceCandidate(int label, String id, String candidate);
     }
 
-    public WebRTCWraper(RtcListener listener, android.opengl.EGLContext eglContext) {
+    public WebRTCWraper(RtcListener listener, android.opengl.EGLContext eglContext, boolean ifNeedAddStream) {
         mListener = listener;
+        mIfNeedAddStream = ifNeedAddStream;
         PeerConnectionFactory.initializeAndroidGlobals(listener, true, true, true, eglContext);
         mPeerFactory = new PeerConnectionFactory();
         mIceServers.add(new PeerConnection.IceServer("stun:23.21.150.121"));
@@ -104,7 +107,9 @@ public class WebRTCWraper implements SdpObserver, PeerConnection.Observer{
 
     private void createPeerConnection() {
         mPeer = mPeerFactory.createPeerConnection(mIceServers, mMediaConstraints, this);
-        mPeer.addStream(mLocalMedia);
+        if (mIfNeedAddStream) {
+            mPeer.addStream(mLocalMedia);
+        }
     }
 
     private void createLocalMedia() {
@@ -122,7 +127,9 @@ public class WebRTCWraper implements SdpObserver, PeerConnection.Observer{
         AudioSource audioSource = mPeerFactory.createAudioSource(new MediaConstraints());
         mLocalMedia.addTrack(mPeerFactory.createAudioTrack("ARDAMSa0", audioSource));
 
-        mListener.onLocalStream(mLocalMedia);
+        if (mIfNeedAddStream) {
+            mListener.onLocalStream(mLocalMedia);
+        }
     }
 
     private VideoCapturer getVideoCaptureer() {

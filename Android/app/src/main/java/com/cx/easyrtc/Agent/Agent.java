@@ -10,9 +10,12 @@ public class Agent {
 
     private String mName;
 
-    public Agent(String id, String name) {
+    private String mType;
+
+    public Agent(String id, String name, String type) {
         mID = id;
         mName = name;
+        mType = type;
     }
 
     public String id() {
@@ -21,6 +24,10 @@ public class Agent {
 
     public String name() {
         return mName;
+    }
+
+    public String type() {
+        return mType;
     }
 
 }

@@ -111,6 +111,14 @@ public class CallActivity extends AppCompatActivity implements SocketWraper.Sock
     private void jumpToNextActivity(String status) {
         Intent intent = new Intent(CallActivity.this, RTCActivity.class);
         intent.putExtra("status", status);
+
+        Agent agent = mAgentListAdapter.getChooseAgent();
+        if (agent.type().equals("Android_Camera")) {
+            intent.putExtra("type", "camera");
+        } else {
+            intent.putExtra("type", "client");
+        }
+
         startActivity(intent);
     }
 

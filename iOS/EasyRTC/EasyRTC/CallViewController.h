@@ -20,4 +20,6 @@
 
 @property (strong, nonatomic)NSString *actionType;
 
+@property bool ifNeedAddStream;
+
 @end

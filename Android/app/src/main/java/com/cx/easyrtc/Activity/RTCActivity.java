@@ -34,6 +34,8 @@ public class RTCActivity extends AppCompatActivity implements SocketWraper.Socke
 
     private String mCallStatus;
 
+    private boolean mIfNeedAddStream;
+
     private WebRTCWraper mRtcWraper;
 
     private VideoRenderer.Callbacks mRtcLocalRender;
@@ -52,6 +54,7 @@ public class RTCActivity extends AppCompatActivity implements SocketWraper.Socke
         Log.e("skruazzz", "RTCActivity onCreate");
         setUI();
         getCallStatus();
+        getType();
         setGLView();
         setVideoRender();
     }
@@ -90,6 +93,15 @@ public class RTCActivity extends AppCompatActivity implements SocketWraper.Socke
         mCallStatus = getIntent().getExtras().getString("status");
     }
 
+    private void getType() {
+        String remoteType = getIntent().getExtras().getString("type");
+        if (remoteType.equals("camera")) {
+            mIfNeedAddStream = false;
+        } else {
+            mIfNeedAddStream = true;
+        }
+    }
+
     private void setGLView() {
         mGLView = findViewById(R.id.glview);
         mGLView.setPreserveEGLContextOnPause(true);
@@ -115,7 +127,7 @@ public class RTCActivity extends AppCompatActivity implements SocketWraper.Socke
 
     private void setRtcWraper() {
         Log.e("sliver", "RTCActivity setRtcWraper");
-        mRtcWraper = new WebRTCWraper(this, VideoRendererGui.getEGLContext());
+        mRtcWraper = new WebRTCWraper(this, VideoRendererGui.getEGLContext(), mIfNeedAddStream);
         setSocketWraper();
         createOfferOrAck();
     }
@@ -192,8 +204,10 @@ public class RTCActivity extends AppCompatActivity implements SocketWraper.Socke
         mediaStream.videoTracks.get(0).addRenderer(new VideoRenderer(mRtcRemoteRender));
         VideoRendererGui.update(mRtcRemoteRender, 0, 0, 75, 75,
                 VideoRendererGui.ScalingType.SCALE_ASPECT_FILL, true);
-        VideoRendererGui.update(mRtcLocalRender, 75, 75, 25, 25,
-                VideoRendererGui.ScalingType.SCALE_ASPECT_FILL, true);
+        if (mIfNeedAddStream) {
+            VideoRendererGui.update(mRtcLocalRender, 75, 75, 25, 25,
+                    VideoRendererGui.ScalingType.SCALE_ASPECT_FILL, true);
+        }
     }
 
     @Override
