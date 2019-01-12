@@ -37,7 +37,6 @@
 
 @implementation ViewController
 
-#pragma mark ViewController delegate
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -48,7 +47,7 @@
     self.AgentsView.dataSource = self;
 
     [[SocketWraper shareSocketWraper] addListener:self];
-    [[SocketWraper shareSocketWraper] requestUserList];
+    [[SocketWraper shareSocketWraper] updateRemoteAgent];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -88,7 +87,7 @@
 }
 
 #pragma mark socket delegate
-- (void)onUserAgentsUpdate:(NSArray *)data
+- (void)onRemoteAgentUpate:(NSArray *)data
 {
     self.userAgentList = data;
     [self.AgentsView reloadData];
@@ -99,11 +98,6 @@
                     type:(NSString *)type value:(NSString *)value
 {
     [self processSignal:source target:target type:type value:value];
-}
-
-- (void)onRemoteCandidate:(int)label mid:(NSString *)mid candidate:(NSString *)candidate
-{
-    
 }
 
 #pragma mark tableview delegate

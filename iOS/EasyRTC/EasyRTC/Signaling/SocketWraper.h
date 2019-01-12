@@ -10,7 +10,7 @@
 
 @protocol SocketDelegate <NSObject>
 
-- (void)onUserAgentsUpdate:(NSArray *)data;
+- (void)onRemoteAgentUpate:(NSArray *)data;
 
 - (void)onRemoteEventMsg:(NSString *)source target:(NSString *)target type:(NSString *)type value:(NSString *)value;
 
@@ -26,7 +26,7 @@
 
 + (instancetype)shareSocketWraper;
 
-- (void)setURL:(NSURL *)url;
+- (void)connectToURL:(NSURL *)url;
 
 - (void)emit:(NSString *)type value:(NSString *)value;
 
@@ -34,9 +34,9 @@
 
 - (void)emit:(NSString *)type data:(NSArray *)data;
 
-- (void)emitHeartBeat;
+- (void)keepAlive;
 
-- (void)requestUserList;
+- (void)updateRemoteAgent;
 
 - (void)addListener:(id<SocketDelegate>) delegate;
 

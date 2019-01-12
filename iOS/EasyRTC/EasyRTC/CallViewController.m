@@ -100,11 +100,6 @@
 }
 
 #pragma mark SignalDelegate
-- (void)onUserAgentsUpdate:(NSArray *)data
-{
-    
-}
-
 - (void)onRemoteEventMsg:(NSString *)source target:(NSString *)target type:(NSString *)type value:(NSString *)value
 {
     [self processSignalMsg:source target:target type:type value:value];

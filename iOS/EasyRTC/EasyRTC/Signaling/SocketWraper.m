@@ -20,7 +20,7 @@
 
 @property (nonatomic, strong) SocketIOClient *socketIOClient;
 
-@property (nonatomic, strong) NSMutableArray *listeners;
+@property (atomic, strong) NSMutableArray *listeners;
 
 @end
 
@@ -36,16 +36,16 @@
     return socketWraper;
 }
 
-- (void)setURL:(NSURL *)url
+- (void)connectToURL:(NSURL *)url
 {
     self.listeners = [[NSMutableArray alloc] init];
     self.socketManger = [[SocketManager alloc] initWithSocketURL:url config:@{@"log": @NO, @"compress": @YES}];
     self.socketIOClient = self.socketManger.defaultSocket;
-    [self setSocketEvent];
+    [self setSocketListenEvent];
     [self.socketIOClient connect];
 }
 
-- (void)setSocketEvent
+- (void)setSocketListenEvent
 {
     [self.socketIOClient on:@"connect" callback:^(NSArray *data, SocketAckEmitter *ack) {
         EasyLog(TAG, "SocketIO connect");
@@ -80,7 +80,9 @@
         NSString *mid = [JsonObject getStringFromJson:data type:@"mid"];
         NSString *candidate = [JsonObject getStringFromJson:data type:@"candidate"];
         for (int i = 0; i < self.listeners.count; i++) {
-            [self.listeners[i] onRemoteCandidate:[labelStr intValue] mid:mid candidate:candidate];
+            if ([self.listeners[i] respondsToSelector:@selector(onRemoteCandidate:mid:candidate:)]) {
+                [self.listeners[i] onRemoteCandidate:[labelStr intValue] mid:mid candidate:candidate];
+            }
         }
         [self verify:@"candidate"];
     }];
@@ -113,7 +115,7 @@
     [self.socketIOClient emit:type with:data];
 }
 
-- (void)emitHeartBeat
+- (void)keepAlive
 {
     if (self.uid) {
         NSArray *data = @[@{@"source" : self.uid, @"target" : @"EasyRTC Server", @"type" : @"heart", @"value" : @"yes"}];
@@ -121,7 +123,7 @@
     }
 }
 
-- (void)requestUserList
+- (void)updateRemoteAgent
 {
     NSArray *data = @[@{@"value" : @"yes"}];
     [self.socketIOClient emit:@"request_user_list" with:data];
@@ -148,7 +150,9 @@
     }
     
     for (int i = 0; i < self.listeners.count; i++) {
-        [self.listeners[i] onUserAgentsUpdate:[agentArray mutableCopy]];
+        if ([self.listeners[i] respondsToSelector:@selector(onRemoteAgentUpate:)]) {
+            [self.listeners[i] onRemoteAgentUpate:[agentArray mutableCopy]];
+        }
     }
 }
 
@@ -160,7 +164,9 @@
     NSString *value = [JsonObject getStringFromJson:data type:@"value"];
     
     for (int i = 0; i < self.listeners.count; i++) {
-        [self.listeners[i] onRemoteEventMsg:source target:target type:type value:value];
+        if ([self.listeners[i] respondsToSelector:@selector(onRemoteEventMsg:target:type:value:)]) {
+            [self.listeners[i] onRemoteEventMsg:source target:target type:type value:value];
+        }
     }
 }
 

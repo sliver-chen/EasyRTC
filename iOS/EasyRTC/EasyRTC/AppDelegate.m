@@ -20,11 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self initWebRTCWraper];
-    
-    NSURL *url = [[NSURL alloc] initWithString:@"http://129.28.101.171:1234"];
-    [[SocketWraper shareSocketWraper] setURL:url];
-
-    [self initSocketHeartBeat];
+    [self initSocketWraper];
+    [self setSocketKeepAlive];
     return YES;
 }
 
@@ -56,8 +53,8 @@
 }
 
 - (void)initSocketWraper {
-    NSURL *url = [[NSURL alloc] initWithString:@"http://172.20.64.86:1234"];
-    [[SocketWraper shareSocketWraper] setURL:url];
+    NSURL *url = [[NSURL alloc] initWithString:@"http://129.28.101.171:1234"];
+    [[SocketWraper shareSocketWraper] connectToURL:url];
 }
 
 - (void)initWebRTCWraper {
@@ -68,12 +65,12 @@
     [RTCPeerConnectionFactory deinitializeSSL];
 }
 
-- (void)initSocketHeartBeat {
+- (void)setSocketKeepAlive {
     self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
     dispatch_source_set_timer(self.timer, dispatch_time(DISPATCH_TIME_NOW, 0), 2.0 * NSEC_PER_SEC, 0.0 * NSEC_PER_SEC);
     __weak typeof(self) WeakSelf = self;
     dispatch_source_set_event_handler(WeakSelf.timer, ^{
-        [[SocketWraper shareSocketWraper] emitHeartBeat];
+        [[SocketWraper shareSocketWraper] keepAlive];
     });
     dispatch_resume(self.timer);
 }
