@@ -121,7 +121,12 @@
 {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     NSDictionary *dict = self.userAgentList[indexPath.row];
-    cell.textLabel.text = dict[@"name"];
+    cell.textLabel.text = [NSString stringWithFormat:@"name:%@ type:%@", dict[@"name"], dict[@"type"]];
+    if ([dict[@"id"] isEqualToString:[SocketWraper shareSocketWraper].uid]) {
+        cell.textColor = [UIColor yellowColor];
+    } else {
+        cell.textColor = [UIColor redColor];
+    }
     return cell;
 }
 
