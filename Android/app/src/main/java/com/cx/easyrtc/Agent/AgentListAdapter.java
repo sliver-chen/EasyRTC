@@ -72,7 +72,7 @@ public class AgentListAdapter extends BaseAdapter{
         TextView textView = (TextView)view.findViewById(R.id.agent_list_cell_tv);
         String showText = new String("name:" + mAgents.get(i).name() + " type:" + mAgents.get(i).type());
         textView.setText(showText);
-        if (mAgents.get(i).id().equals(SocketWraper.shareContext().getSource())) {
+        if (mAgents.get(i).id().equals(SocketWraper.shareContext().getUid())) {
             textView.setTextColor(Color.YELLOW);
         } else {
             textView.setTextColor(Color.RED);

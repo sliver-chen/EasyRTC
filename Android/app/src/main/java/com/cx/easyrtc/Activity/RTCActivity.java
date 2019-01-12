@@ -142,7 +142,7 @@ public class RTCActivity extends AppCompatActivity implements SocketWraper.Socke
 
     private void processSignalMsg(String source, String target, String type, String value) {
         Log.e("sliver", "RTCActivity processSignalMsg " + type);
-        if (target.equals(SocketWraper.shareContext().getSource())) {
+        if (target.equals(SocketWraper.shareContext().getUid())) {
             if (type.equals("offer")) {
                 Log.e("sliver", "RTCActivity receive offer " + mRtcWraper);
                 mRtcWraper.setRemoteSdp(type, value);
@@ -232,7 +232,7 @@ public class RTCActivity extends AppCompatActivity implements SocketWraper.Socke
         Log.e("sliver", "RTCActivity onIceCandidate");
         try {
             JSONObject msg = new JSONObject();
-            msg.put("source", SocketWraper.shareContext().getSource());
+            msg.put("source", SocketWraper.shareContext().getUid());
             msg.put("target", SocketWraper.shareContext().getTarget());
             msg.put("label", label);
             msg.put("mid", id);

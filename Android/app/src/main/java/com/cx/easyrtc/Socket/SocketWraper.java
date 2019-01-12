@@ -62,7 +62,7 @@ public class SocketWraper {
         super.finalize();
     }
 
-    public void setURL(String host) {
+    public void connectToURL(String host) {
         mMsgProcessor = new MessageProcessor();
         try {
             mSignaling = IO.socket(host);
@@ -92,7 +92,7 @@ public class SocketWraper {
         uid = source;
     }
 
-    public String getSource() {
+    public String getUid() {
         return uid;
     }
 
@@ -117,7 +117,7 @@ public class SocketWraper {
         mSignaling.emit(event, object);
     }
 
-    public void emitHeartBeat() {
+    public void keepAlive() {
         if (uid != null) {
             try {
                 JSONObject msg = new JSONObject();
@@ -132,7 +132,7 @@ public class SocketWraper {
         }
     }
 
-    public void requestUserList() {
+    public void updateRemoteAgent() {
         try {
             JSONObject msg = new JSONObject();
             msg.put("source", uid);

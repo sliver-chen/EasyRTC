@@ -43,7 +43,7 @@ public class CallActivity extends AppCompatActivity implements SocketWraper.Sock
         setUI();
         setAgents();
         setSocket();
-        requestUserList();
+        updateRemoteAgent();
     }
 
     @Override
@@ -58,8 +58,8 @@ public class CallActivity extends AppCompatActivity implements SocketWraper.Sock
         SocketWraper.shareContext().addListener(this);
     }
 
-    private void requestUserList() {
-        SocketWraper.shareContext().requestUserList();
+    private void updateRemoteAgent() {
+        SocketWraper.shareContext().updateRemoteAgent();
     }
 
     private void setUI() {
@@ -123,7 +123,7 @@ public class CallActivity extends AppCompatActivity implements SocketWraper.Sock
     }
 
     private void processSignal(String source, String target, String type, String value) {
-        if (target.equals(SocketWraper.shareContext().getSource())) {
+        if (target.equals(SocketWraper.shareContext().getUid())) {
             if (type.equals("invite")) {
                 SocketWraper.shareContext().setTarget(source);
                 runOnUiThread(new Runnable() {

@@ -21,7 +21,7 @@ public class EasyRTCApplication extends Application{
 
         mContext = getApplicationContext();
 
-        SocketWraper.shareContext().setURL("http://129.28.101.171:1234/");
+        SocketWraper.shareContext().connectToURL("http://129.28.101.171:1234/");
         initSocketHeartBeat();
     }
 
@@ -34,7 +34,7 @@ public class EasyRTCApplication extends Application{
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                SocketWraper.shareContext().emitHeartBeat();
+                SocketWraper.shareContext().keepAlive();
             }
         }, 0, 2000);
     }
