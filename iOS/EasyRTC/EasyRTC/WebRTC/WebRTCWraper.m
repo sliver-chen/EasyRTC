@@ -24,8 +24,8 @@
 #define TAG "WebRTCWraper"
 
 static NSString *const kARDDefaultSTUNServerUrl = @"stun:stun.l.google.com:19302";
-static NSString *const kCxSTUNServerUrl = @"turn:129.28.101.171:3478";
-static NSString *const kQXHTURNServerUrl = @"turn:39.105.125.160:3478";
+static NSString *const kARDDefaultSTUNServerUrl2 = @"turn:129.28.101.171:3478";
+static NSString *const kARDDefaultSTUNServerUrl3 = @"turn:39.105.125.160:3478";
 
 @interface WebRTCWraper ()
 
@@ -52,8 +52,8 @@ static NSString *const kQXHTURNServerUrl = @"turn:39.105.125.160:3478";
         self.peerFactory = [[RTCPeerConnectionFactory alloc] init];
         self.iceServers = [[NSMutableArray alloc] init];
         [self.iceServers addObject:[self createIceServer:kARDDefaultSTUNServerUrl username:@"" password:@""]];
-        [self.iceServers addObject:[self createIceServer:kCxSTUNServerUrl username:@"cx" password:@"1234"]];
-        [self.iceServers addObject:[self createIceServer:kQXHTURNServerUrl username:@"helloword" password:@"helloword"]];
+        [self.iceServers addObject:[self createIceServer:kARDDefaultSTUNServerUrl2 username:@"cx" password:@"1234"]];
+        [self.iceServers addObject:[self createIceServer:kARDDefaultSTUNServerUrl3 username:@"helloword" password:@"helloword"]];
         [self createLocalMedia];
         self.peer = [self.peerFactory peerConnectionWithICEServers:self.iceServers constraints:[self defaultPeerConnectionConstraints] delegate:self];
         if (ifNeedAddStream) {
